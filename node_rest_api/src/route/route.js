@@ -5,5 +5,6 @@ module.exports = ({ }, app) => {
 
     app.post('/post_from_data', (req, res) => {
         console.log(req.body);
+        res.send(req.body);
     });
 }
