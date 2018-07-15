@@ -60,7 +60,7 @@ export class FromComponentComponent {
     this.http.post('http://192.168.239.134:3000/post_from_data', formValue.value)
       .subscribe(
         (data: any) => {
-          console.log(data);
+          console.log(data);//for debugging
         }
       )
   }
