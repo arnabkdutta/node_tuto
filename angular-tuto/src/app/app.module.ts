@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 import { AppComponent } from './app.component';
 import { FromComponentComponent } from './from-component/from-component.component';
@@ -22,6 +23,11 @@ const appRoutes: Routes = [
     path: 'home',
     component: ContentComponent,
     data: { title: 'Home Page' }
+  },
+  {
+    path: 'dashbord',
+    component: AfterLoginDivComponent,
+    data: { title: 'Dashbord' }
   }
 ];
 
@@ -44,7 +50,7 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

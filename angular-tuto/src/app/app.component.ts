@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component ,OnInit  } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  cookieValue = '';
+  constructor( private cookieService: CookieService ) { }
+  ngOnInit(): void {
+    this.cookieValue = this.cookieService.get('isLoggedIn');
+    console.log(this.cookieValue);
+  }
 }

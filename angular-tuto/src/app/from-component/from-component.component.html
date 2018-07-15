@@ -16,7 +16,7 @@
         <div class="panel-body">
           <div class="row">
             <div class="col-lg-12">
-              <form #userForm="ngForm" (ngSubmit)="doLogin(userForm)" id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
+              <form #loginFrom="ngForm" (ngSubmit)="doLogin(loginFrom)" id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
                 <div class="form-group">
                   <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" ngModel name="email">
                 </div>
@@ -44,7 +44,7 @@
                   </div>
                 </div>
               </form>
-              <form #userForm="ngForm" (ngSubmit)="doRegister(userForm)" id="register-form" action="https://phpoll.com/register/process" method="post" role="form" style="display: none;">
+              <form #registerForm="ngForm" (ngSubmit)="doRegister(registerForm)" id="register-form" action="https://phpoll.com/register/process" method="post" role="form" style="display: none;">
                 <div class="form-group">
                   <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" ngModel>
                 </div>
